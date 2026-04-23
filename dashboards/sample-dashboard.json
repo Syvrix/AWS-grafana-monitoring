@@ -1,0 +1,9 @@
+{
+  "id": null,
+  "uid": "sample-dashboard",
+  "title": "Sample Dashboard",
+  "timezone": "browser",
+  "schemaVersion": 36,
+  "version": 1,
+  "panels": []
+}

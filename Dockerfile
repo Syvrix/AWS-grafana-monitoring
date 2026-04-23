@@ -11,5 +11,8 @@ RUN if [ -n "$GF_INSTALL_PLUGINS" ]; then \
 COPY provisioning /etc/grafana/provisioning
 COPY dashboards /var/lib/grafana/dashboards
 
+# Persist Grafana data and logs to mounted volumes.
+VOLUME ["/var/lib/grafana", "/var/log/grafana"]
+
 EXPOSE 3000
 USER grafana

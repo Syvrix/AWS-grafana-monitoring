@@ -762,10 +762,10 @@
         "multi": false,
         "name": "period",
         "options": [
-          { "selected": false, "text": "60s (1 min)", "value": "60" },
-          { "selected": true,  "text": "300s (5 min)", "value": "300" },
-          { "selected": false, "text": "900s (15 min)", "value": "900" },
-          { "selected": false, "text": "3600s (1 hr)", "value": "3600" }
+          { "selected": false, "text": "60s (1 min)", "value": "1m" },
+          { "selected": true,  "text": "300s (5 min)", "value": "5m" },
+          { "selected": false, "text": "900s (15 min)", "value": "15m" },
+          { "selected": false, "text": "3600s (1 hr)", "value": "1h" }
         ],
         "query": "60,300,900,3600",
         "type": "custom"

@@ -65,3 +65,19 @@ docker compose up -d
 - The image uses the official `grafana/grafana-oss:latest` base image.
 - Provisioned datasource assumes a Prometheus instance available at `http://prometheus:9090`.
 - Update the datasource URL or add additional provisioning files as needed.
+
+
+## Grafana
+### Data source
+1. Surf to the Grafana website
+2. Expand Connections → Data Sources → add new
+  a. Search for "CloudWatch" and select it.
+3. Setup the datasource
+  a. Name: cloudwatch-fina-staging
+  b. Set the authentication provider to "Access & Secret key"
+  c. Paste in the Access Key ID and Secret Access Key
+  d. Set default region: eu-north-1
+  e. Save & Test
+4. If setup after saving and testing the following prompt will be displayed
+  a. 1. Successfully queried the CloudWatch metrics API. 2. Successfully queried the CloudWatch logs API.
+  

@@ -5,8 +5,8 @@
     "name": "aws-lambda-cost-perfV5",
     "namespace": "default",
     "uid": "dc5e79a7-0373-48ad-bc0a-437ee2e3eed2",
-    "resourceVersion": "1777890149921009",
-    "generation": 6,
+    "resourceVersion": "1777897692889993",
+    "generation": 9,
     "creationTimestamp": "2026-05-04T09:12:19Z",
     "labels": {
       "grafana.app/deprecatedInternalID": "2838015828344832"
@@ -14,10 +14,10 @@
     "annotations": {
       "grafana.app/createdBy": "user:efjyl1a64hkw0b",
       "grafana.app/folder": "",
-      "grafana.app/message": "Changed default variable values",
+      "grafana.app/message": "Updated datasources to be dynamic.",
       "grafana.app/saved-from-ui": "Grafana v13.0.1 (a100054f)",
       "grafana.app/updatedBy": "user:efjyl1a64hkw0b",
-      "grafana.app/updatedTimestamp": "2026-05-04T10:22:29Z"
+      "grafana.app/updatedTimestamp": "2026-05-04T12:28:12Z"
     }
   },
   "spec": {
@@ -65,7 +65,7 @@
                       "group": "cloudwatch",
                       "version": "v0",
                       "datasource": {
-                        "name": "efjyxw2w2jh8gb"
+                        "name": "${Datasource}"
                       },
                       "spec": {
                         "alias": "",
@@ -96,7 +96,7 @@
                       "group": "cloudwatch",
                       "version": "v0",
                       "datasource": {
-                        "name": "efjyxw2w2jh8gb"
+                        "name": "${Datasource}"
                       },
                       "spec": {
                         "alias": "",
@@ -273,7 +273,7 @@
                       "group": "cloudwatch",
                       "version": "v0",
                       "datasource": {
-                        "name": "efjyxw2w2jh8gb"
+                        "name": "${Datasource}"
                       },
                       "spec": {
                         "alias": "Avg Duration",
@@ -304,7 +304,7 @@
                       "group": "cloudwatch",
                       "version": "v0",
                       "datasource": {
-                        "name": "efjyxw2w2jh8gb"
+                        "name": "${Datasource}"
                       },
                       "spec": {
                         "alias": "P95 Duration",
@@ -335,7 +335,7 @@
                       "group": "cloudwatch",
                       "version": "v0",
                       "datasource": {
-                        "name": "efjyxw2w2jh8gb"
+                        "name": "${Datasource}"
                       },
                       "spec": {
                         "alias": "Max Duration",
@@ -502,7 +502,7 @@
                       "group": "cloudwatch",
                       "version": "v0",
                       "datasource": {
-                        "name": "efjyxw2w2jh8gb"
+                        "name": "${Datasource}"
                       },
                       "spec": {
                         "alias": "Average Duration",
@@ -609,7 +609,7 @@
                       "group": "cloudwatch",
                       "version": "v0",
                       "datasource": {
-                        "name": "efjyxw2w2jh8gb"
+                        "name": "${Datasource}"
                       },
                       "spec": {
                         "alias": "Max Duration",
@@ -716,7 +716,7 @@
                       "group": "cloudwatch",
                       "version": "v0",
                       "datasource": {
-                        "name": "efjyxw2w2jh8gb"
+                        "name": "${Datasource}"
                       },
                       "spec": {
                         "alias": "Errors",
@@ -747,7 +747,7 @@
                       "group": "cloudwatch",
                       "version": "v0",
                       "datasource": {
-                        "name": "efjyxw2w2jh8gb"
+                        "name": "${Datasource}"
                       },
                       "spec": {
                         "alias": "Throttles",
@@ -932,7 +932,7 @@
                       "group": "cloudwatch",
                       "version": "v0",
                       "datasource": {
-                        "name": "efjyxw2w2jh8gb"
+                        "name": "${Datasource}"
                       },
                       "spec": {
                         "alias": "Concurrent Executions",
@@ -963,7 +963,7 @@
                       "group": "cloudwatch",
                       "version": "v0",
                       "datasource": {
-                        "name": "efjyxw2w2jh8gb"
+                        "name": "${Datasource}"
                       },
                       "spec": {
                         "alias": "Unreserved Concurrency",
@@ -1116,7 +1116,7 @@
                       "group": "cloudwatch",
                       "version": "v0",
                       "datasource": {
-                        "name": "efjyxw2w2jh8gb"
+                        "name": "${Datasource}"
                       },
                       "spec": {
                         "alias": "",
@@ -1266,7 +1266,7 @@
                       "group": "cloudwatch",
                       "version": "v0",
                       "datasource": {
-                        "name": "efjyxw2w2jh8gb"
+                        "name": "${Datasource}"
                       },
                       "spec": {
                         "alias": "",
@@ -1416,7 +1416,7 @@
                       "group": "cloudwatch",
                       "version": "v0",
                       "datasource": {
-                        "name": "efjyxw2w2jh8gb"
+                        "name": "${Datasource}"
                       },
                       "spec": {
                         "alias": "",
@@ -1567,7 +1567,7 @@
                       "group": "cloudwatch",
                       "version": "v0",
                       "datasource": {
-                        "name": "efjyxw2w2jh8gb"
+                        "name": "${Datasource}"
                       },
                       "spec": {
                         "alias": "Invocations",
@@ -1749,7 +1749,7 @@
                       "group": "cloudwatch",
                       "version": "v0",
                       "datasource": {
-                        "name": "efjyxw2w2jh8gb"
+                        "name": "${Datasource}"
                       },
                       "spec": {
                         "alias": "Invocations",
@@ -1856,7 +1856,7 @@
                       "group": "cloudwatch",
                       "version": "v0",
                       "datasource": {
-                        "name": "efjyxw2w2jh8gb"
+                        "name": "${Datasource}"
                       },
                       "spec": {
                         "alias": "Errors",
@@ -1963,7 +1963,7 @@
                       "group": "cloudwatch",
                       "version": "v0",
                       "datasource": {
-                        "name": "efjyxw2w2jh8gb"
+                        "name": "${Datasource}"
                       },
                       "spec": {
                         "alias": "Throttles",
@@ -2070,7 +2070,7 @@
                       "group": "cloudwatch",
                       "version": "v0",
                       "datasource": {
-                        "name": "efjyxw2w2jh8gb"
+                        "name": "${Datasource}"
                       },
                       "spec": {
                         "alias": "",
@@ -2101,7 +2101,7 @@
                       "group": "cloudwatch",
                       "version": "v0",
                       "datasource": {
-                        "name": "efjyxw2w2jh8gb"
+                        "name": "${Datasource}"
                       },
                       "spec": {
                         "alias": "",
@@ -2558,6 +2558,27 @@
     "title": "AWS Lambda — Cost & Performance V5",
     "variables": [
       {
+        "kind": "DatasourceVariable",
+        "spec": {
+          "name": "Datasource",
+          "pluginId": "cloudwatch",
+          "refresh": "onDashboardLoad",
+          "regex": "",
+          "current": {
+            "text": "cloudwatch-fina-staging",
+            "value": "efjyxw2w2jh8gb"
+          },
+          "options": [],
+          "multi": false,
+          "includeAll": false,
+          "label": "Datasource",
+          "hide": "dontHide",
+          "skipUrlSync": false,
+          "description": "Select the source to get data from. ",
+          "allowCustomValue": true
+        }
+      },
+      {
         "kind": "QueryVariable",
         "spec": {
           "name": "region",
@@ -2574,7 +2595,7 @@
             "group": "cloudwatch",
             "version": "v0",
             "datasource": {
-              "name": "efjyxw2w2jh8gb"
+              "name": "${Datasource}"
             },
             "spec": {
               "__legacyStringValue": "regions()"
@@ -2617,7 +2638,7 @@
             "group": "cloudwatch",
             "version": "v0",
             "datasource": {
-              "name": "efjyxw2w2jh8gb"
+              "name": "${Datasource}"
             },
             "spec": {
               "__legacyStringValue": "dimension_values(${region}, AWS/Lambda, Invocations, FunctionName)"

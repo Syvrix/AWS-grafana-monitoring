@@ -2,22 +2,22 @@
   "apiVersion": "dashboard.grafana.app/v2",
   "kind": "Dashboard",
   "metadata": {
-    "name": "lambda-rds-monitor-v0",
+    "name": "lambda-rds-monitor-v2",
     "namespace": "default",
-    "uid": "5cce5f95-5cf8-4444-b28f-53501d051f44",
-    "resourceVersion": "1777889578439980",
-    "generation": 11,
-    "creationTimestamp": "2026-04-29T09:34:58Z",
+    "uid": "3ef636de-0837-4ff2-9797-60fb329e602c",
+    "resourceVersion": "1777898080792012",
+    "generation": 2,
+    "creationTimestamp": "2026-05-04T12:32:35Z",
     "labels": {
-      "grafana.app/deprecatedInternalID": "2742441359753216"
+      "grafana.app/deprecatedInternalID": "2140984308629504"
     },
     "annotations": {
-      "grafana.app/createdBy": "user:efjyl1a64hkw0b",
+      "grafana.app/createdBy": "user:afl1n9ere6cqoc",
       "grafana.app/folder": "",
-      "grafana.app/message": "Added filters and tranformation merges",
+      "grafana.app/message": "Updated period table",
       "grafana.app/saved-from-ui": "Grafana v13.0.1 (a100054f)",
-      "grafana.app/updatedBy": "user:efjyl1a64hkw0b",
-      "grafana.app/updatedTimestamp": "2026-05-04T10:12:58Z"
+      "grafana.app/updatedBy": "user:afl1n9ere6cqoc",
+      "grafana.app/updatedTimestamp": "2026-05-04T12:34:40Z"
     }
   },
   "spec": {
@@ -65,7 +65,7 @@
                       "group": "cloudwatch",
                       "version": "v0",
                       "datasource": {
-                        "name": "efjyxw2w2jh8gb"
+                        "name": "${Datasource}"
                       },
                       "spec": {
                         "dimensions": {
@@ -165,7 +165,7 @@
                       "group": "cloudwatch",
                       "version": "v0",
                       "datasource": {
-                        "name": "efjyxw2w2jh8gb"
+                        "name": "${Datasource}"
                       },
                       "spec": {
                         "alias": "Invocations",
@@ -195,7 +195,7 @@
                       "group": "cloudwatch",
                       "version": "v0",
                       "datasource": {
-                        "name": "efjyxw2w2jh8gb"
+                        "name": "${Datasource}"
                       },
                       "spec": {
                         "alias": "Errors",
@@ -377,7 +377,7 @@
                       "group": "cloudwatch",
                       "version": "v0",
                       "datasource": {
-                        "name": "efjyxw2w2jh8gb"
+                        "name": "${Datasource}"
                       },
                       "spec": {
                         "alias": "p50",
@@ -407,7 +407,7 @@
                       "group": "cloudwatch",
                       "version": "v0",
                       "datasource": {
-                        "name": "efjyxw2w2jh8gb"
+                        "name": "${Datasource}"
                       },
                       "spec": {
                         "alias": "p99",
@@ -559,7 +559,7 @@
                       "group": "cloudwatch",
                       "version": "v0",
                       "datasource": {
-                        "name": "efjyxw2w2jh8gb"
+                        "name": "${Datasource}"
                       },
                       "spec": {
                         "dimensions": {
@@ -664,7 +664,7 @@
                       "group": "cloudwatch",
                       "version": "v0",
                       "datasource": {
-                        "name": "efjyxw2w2jh8gb"
+                        "name": "${Datasource}"
                       },
                       "spec": {
                         "alias": "Successful connections",
@@ -757,7 +757,7 @@
                       "group": "cloudwatch",
                       "version": "v0",
                       "datasource": {
-                        "name": "efjyxw2w2jh8gb"
+                        "name": "${Datasource}"
                       },
                       "spec": {
                         "expression": "fields @timestamp, @message\n| filter @message like /(?i)(connection refused|could not connect|ECONNREFUSED|connection timeout|connection failed|unable to connect|Access denied|OperationalError|ETIMEDOUT)/\n| stats count() as failures by bin($period)",
@@ -857,7 +857,7 @@
                       "group": "cloudwatch",
                       "version": "v0",
                       "datasource": {
-                        "name": "efjyxw2w2jh8gb"
+                        "name": "${Datasource}"
                       },
                       "spec": {
                         "alias": "DB connections",
@@ -989,7 +989,7 @@
                       "group": "cloudwatch",
                       "version": "v0",
                       "datasource": {
-                        "name": "efjyxw2w2jh8gb"
+                        "name": "${Datasource}"
                       },
                       "spec": {
                         "expression": "fields @timestamp, @message\n| filter @message like /(?i)(connected|connection established|DB connection|database connected|RDS connected|acquired connection)/\n| stats count(*) as successes by bin(5m) as time_period\n| sort time_period desc",
@@ -1019,7 +1019,7 @@
                       "group": "cloudwatch",
                       "version": "v0",
                       "datasource": {
-                        "name": "efjyxw2w2jh8gb"
+                        "name": "${Datasource}"
                       },
                       "spec": {
                         "expression": "fields @timestamp, @message\n| filter @message like /(?i)(connection refused|could not connect|ECONNREFUSED|connection timeout|connection failed|unable to connect|Access denied|OperationalError|ETIMEDOUT)/\n| stats count() as failures by bin($period)",
@@ -1177,7 +1177,7 @@
                       "group": "cloudwatch",
                       "version": "v0",
                       "datasource": {
-                        "name": "efjyxw2w2jh8gb"
+                        "name": "${Datasource}"
                       },
                       "spec": {
                         "dimensions": {
@@ -1208,7 +1208,7 @@
                       "group": "cloudwatch",
                       "version": "v0",
                       "datasource": {
-                        "name": "efjyxw2w2jh8gb"
+                        "name": "${Datasource}"
                       },
                       "spec": {
                         "dimensions": {
@@ -1239,7 +1239,7 @@
                       "group": "cloudwatch",
                       "version": "v0",
                       "datasource": {
-                        "name": "efjyxw2w2jh8gb"
+                        "name": "${Datasource}"
                       },
                       "spec": {
                         "dimensions": {},
@@ -1354,10 +1354,10 @@
                       "group": "cloudwatch",
                       "version": "v0",
                       "datasource": {
-                        "name": "efjyxw2w2jh8gb"
+                        "name": "${Datasource}"
                       },
                       "spec": {
-                        "expression": "fields @timestamp, @message, @logStream\n| filter @message like /(?i)(ERROR|WARN|Exception|Traceback|fatal|critical)/\n| sort @timestamp desc\n| limit 200",
+                        "expression": "fields @timestamp, @message, @logStream\n| filter userIdentity.userName != \"Grafana-logs-Cloudwatch\"\n| filter @message like /(?i)(ERROR|WARN|Exception|Traceback|fatal|critical)/\n| sort @timestamp desc\n| limit 200",
                         "logGroups": [
                           {
                             "arn": "$function_name",
@@ -1430,10 +1430,10 @@
                       "group": "cloudwatch",
                       "version": "v0",
                       "datasource": {
-                        "name": "efjyxw2w2jh8gb"
+                        "name": "${Datasource}"
                       },
                       "spec": {
-                        "expression": "fields @timestamp, @message, @logStream\n| filter @message like /(?i)(connect|RDS|database|postgres|mysql|aurora|pg|sequelize|knex|prisma|pool|ECONNREFUSED|ETIMEDOUT)/\n| sort @timestamp desc\n| limit 200",
+                        "expression": "fields @timestamp, @message, @logStream\n| filter userIdentity.userName != \"Grafana-logs-Cloudwatch\"\n| filter @message like /(?i)(connect|RDS|database|postgres|mysql|aurora|pg|sequelize|knex|prisma|pool|ECONNREFUSED|ETIMEDOUT)/\n| sort @timestamp desc\n| limit 200",
                         "logGroups": [
                           {
                             "arn": "$function_name",
@@ -1442,7 +1442,8 @@
                         ],
                         "logsQueryScope": "allLogGroups",
                         "queryMode": "Logs",
-                        "region": "$region"
+                        "region": "$region",
+                        "statsGroups": []
                       }
                     },
                     "refId": "A",
@@ -1503,10 +1504,10 @@
                       "group": "cloudwatch",
                       "version": "v0",
                       "datasource": {
-                        "name": "efjyxw2w2jh8gb"
+                        "name": "${Datasource}"
                       },
                       "spec": {
-                        "expression": "fields @timestamp, @message, @logStream\n| filter @message like /(?i)(GET|POST|PUT|DELETE|PATCH|http|https|axios|fetch|request|response|status|statusCode|200|201|4[0-9]{2}|5[0-9]{2})/\n| sort @timestamp desc\n| limit 200",
+                        "expression": "fields @timestamp, @message, @logStream\n| filter userIdentity.userName != \"Grafana-logs-Cloudwatch\"\n| filter @message like /(?i)(GET|POST|PUT|DELETE|PATCH|http|https|axios|fetch|request|response|status|statusCode|200|201|4[0-9]{2}|5[0-9]{2})/\n| sort @timestamp desc\n| limit 200",
                         "logGroups": [
                           {
                             "arn": "$function_name",
@@ -1515,7 +1516,8 @@
                         ],
                         "logsQueryScope": "allLogGroups",
                         "queryMode": "Logs",
-                        "region": "$region"
+                        "region": "$region",
+                        "statsGroups": []
                       }
                     },
                     "refId": "A",
@@ -1576,7 +1578,7 @@
                       "group": "cloudwatch",
                       "version": "v0",
                       "datasource": {
-                        "name": "efjyxw2w2jh8gb"
+                        "name": "${Datasource}"
                       },
                       "spec": {
                         "dimensions": {
@@ -1681,7 +1683,7 @@
                       "group": "cloudwatch",
                       "version": "v0",
                       "datasource": {
-                        "name": "efjyxw2w2jh8gb"
+                        "name": "${Datasource}"
                       },
                       "spec": {
                         "dimensions": {
@@ -1786,7 +1788,7 @@
                       "group": "cloudwatch",
                       "version": "v0",
                       "datasource": {
-                        "name": "efjyxw2w2jh8gb"
+                        "name": "${Datasource}"
                       },
                       "spec": {
                         "dimensions": {
@@ -2154,8 +2156,29 @@
       "hideTimepicker": false,
       "fiscalYearStartMonth": 0
     },
-    "title": "Lambda · RDS connection & error monitoring OG",
+    "title": "Lambda · RDS connection & error monitoring V2",
     "variables": [
+      {
+        "kind": "DatasourceVariable",
+        "spec": {
+          "name": "Datasource",
+          "pluginId": "cloudwatch",
+          "refresh": "onDashboardLoad",
+          "regex": "",
+          "current": {
+            "text": "cloudwatch-fina-staging",
+            "value": "${Datasource}"
+          },
+          "options": [],
+          "multi": false,
+          "includeAll": false,
+          "label": "Datasource",
+          "hide": "dontHide",
+          "skipUrlSync": false,
+          "description": "Datasource where the data will be retrieved from.",
+          "allowCustomValue": true
+        }
+      },
       {
         "kind": "QueryVariable",
         "spec": {
@@ -2173,7 +2196,7 @@
             "group": "cloudwatch",
             "version": "v0",
             "datasource": {
-              "name": "efjyxw2w2jh8gb"
+              "name": "${Datasource}"
             },
             "spec": {
               "__legacyStringValue": "regions()"
@@ -2206,7 +2229,7 @@
             "group": "cloudwatch",
             "version": "v0",
             "datasource": {
-              "name": "efjyxw2w2jh8gb"
+              "name": "${Datasource}"
             },
             "spec": {
               "__legacyStringValue": "dimension_values($region,AWS/Lambda,Invocations,FunctionName)"
@@ -2240,7 +2263,7 @@
             "group": "cloudwatch",
             "version": "v0",
             "datasource": {
-              "name": "efjyxw2w2jh8gb"
+              "name": "${Datasource}"
             },
             "spec": {
               "__legacyStringValue": "dimension_values($region,AWS/RDS,DatabaseConnections,DBInstanceIdentifier)"
@@ -2261,7 +2284,7 @@
         "kind": "CustomVariable",
         "spec": {
           "name": "period",
-          "query": "1m,5m,15m,1h",
+          "query": "1m,5m,15m,1h,12h,24h,7d,29d",
           "current": {
             "text": "300",
             "value": "300"
@@ -2290,7 +2313,7 @@
           ],
           "multi": false,
           "includeAll": false,
-          "label": "Period (seconds)",
+          "label": "Period",
           "hide": "dontHide",
           "skipUrlSync": false,
           "allowCustomValue": true,

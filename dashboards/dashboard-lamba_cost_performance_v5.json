@@ -4,20 +4,20 @@
   "metadata": {
     "name": "aws-lambda-cost-perfV5",
     "namespace": "default",
-    "uid": "dc5e79a7-0373-48ad-bc0a-437ee2e3eed2",
-    "resourceVersion": "1777897692889993",
-    "generation": 9,
-    "creationTimestamp": "2026-05-04T09:12:19Z",
+    "uid": "af755530-9d83-451e-8c70-683022cee4a5",
+    "resourceVersion": "1777898870928986",
+    "generation": 2,
+    "creationTimestamp": "2026-05-04T12:30:22Z",
     "labels": {
-      "grafana.app/deprecatedInternalID": "2838015828344832"
+      "grafana.app/deprecatedInternalID": "2140426822713344"
     },
     "annotations": {
-      "grafana.app/createdBy": "user:efjyl1a64hkw0b",
+      "grafana.app/createdBy": "user:afl1n9ere6cqoc",
       "grafana.app/folder": "",
-      "grafana.app/message": "Updated datasources to be dynamic.",
+      "grafana.app/message": "Updated period table to fit within 30 days time table period.",
       "grafana.app/saved-from-ui": "Grafana v13.0.1 (a100054f)",
-      "grafana.app/updatedBy": "user:efjyl1a64hkw0b",
-      "grafana.app/updatedTimestamp": "2026-05-04T12:28:12Z"
+      "grafana.app/updatedBy": "user:afl1n9ere6cqoc",
+      "grafana.app/updatedTimestamp": "2026-05-04T12:47:50Z"
     }
   },
   "spec": {
@@ -2678,7 +2678,7 @@
         "kind": "CustomVariable",
         "spec": {
           "name": "period",
-          "query": "1m,1h,6h,1d,7d,1M",
+          "query": "1m,1h,6h,1d,7d,29d",
           "current": {
             "text": "1M",
             "value": "1M"

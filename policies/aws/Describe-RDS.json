@@ -1,0 +1,93 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "RDSRestoreVerification",
+            "Effect": "Allow",
+            "Action": [
+				"rds:DescribeDBInstances",
+				"rds:DescribeDBSnapshots",
+				"rds:DescribeDBClusterSnapshots",
+				"rds:DescribeEvents",
+				"rds:DescribeDBInstanceAutomatedBackups",
+				"rds:DescribeDBParameterGroups",
+				"rds:DescribeDBParameters",
+				"rds:DescribeOptionGroups",
+				"rds:DescribeDBSubnetGroups",
+				"rds:DescribeDBClusterEndpoints",
+				"rds:DescribeDBLogFiles",
+				"rds:DownloadDBLogFilePortion",
+				"rds:DescribeEventSubscriptions",
+				"rds:DescribePendingMaintenanceActions"
+            ],
+            "Resource": "*"
+        },
+		{
+            "Sid": "EC2RestoreVerification",
+            "Effect": "Allow",
+            "Action": [
+				"ec2:DescribeSecurityGroups",
+				"ec2:DescribeVpcEndpoints"
+            ],
+            "Resource": "*"			
+		},
+		{
+			"Sid": "Route53RestoreVerification",
+			"Effect": "Allow",
+			"Action": [
+				"route53:ListResourceRecordSets"
+			],
+			"Resource": "*"
+		},
+		{
+			"Sid": "KMSRestoreVerification",
+			"Effect": "Allow",
+			"Action": [
+				"kms:DescribeKey",
+				"kms:ListKeys",
+				"kms:GetKeyRotationStatus"
+			],
+			"Resource": "*"
+		},
+		{
+			"Sid": "IAMRestoreVerification",
+			"Effect": "Allow",
+			"Action": [
+				"iam:SimulatePrincipalPolicy"
+			],
+			"Resource": "*"
+		},
+		{
+			"Sid": "CloudWatchRestoreVerification",
+			"Effect": "Allow",
+			"Action": [
+				"cloudwatch:GetMetricStatistics",
+				"cloudwatch:DescribeAlarms",
+				"cloudwatch:DescribeAlarmsForMetric",
+				"logs:FilterLogEvents",
+				"logs:GetLogEvents"
+			],
+			"Resource": "*"
+		},
+		{
+			"Sid": "SNSRestoreVerification",
+			"Effect": "Allow",
+			"Action": [
+				"sns:ListSubscriptions",
+				"sns:ListTopics",
+				"sns:ListSubscriptionsByTopic"
+			],
+			"Resource": "*"
+		},
+        {
+            "Sid": "GrafanaUI",
+            "Effect": "Allow",
+            "Action": [
+                "ec2:DescribeRegions",
+                "ec2:DescribeSnapshots",
+                "tag:GetResources"
+            ],
+            "Resource": "*"
+        }
+    ]
+}

@@ -2,7 +2,7 @@
     "Version": "2012-10-17",
     "Statement": [
         {
-            "Sid": "RDSRestoreVerification",
+            "Sid": "RDSGrafanaVerification",
             "Effect": "Allow",
             "Action": [
 				"rds:DescribeDBInstances",
@@ -23,7 +23,7 @@
             "Resource": "*"
         },
 		{
-            "Sid": "EC2RestoreVerification",
+            "Sid": "EC2GrafanaVerification",
             "Effect": "Allow",
             "Action": [
 				"ec2:DescribeSecurityGroups",
@@ -32,7 +32,7 @@
             "Resource": "*"			
 		},
 		{
-			"Sid": "Route53RestoreVerification",
+			"Sid": "Route53GrafanaVerification",
 			"Effect": "Allow",
 			"Action": [
 				"route53:ListResourceRecordSets"
@@ -40,7 +40,7 @@
 			"Resource": "*"
 		},
 		{
-			"Sid": "KMSRestoreVerification",
+			"Sid": "KMSGrafanaVerification",
 			"Effect": "Allow",
 			"Action": [
 				"kms:DescribeKey",
@@ -50,7 +50,7 @@
 			"Resource": "*"
 		},
 		{
-			"Sid": "IAMRestoreVerification",
+			"Sid": "IAMGrafanaVerification",
 			"Effect": "Allow",
 			"Action": [
 				"iam:SimulatePrincipalPolicy"
@@ -58,19 +58,26 @@
 			"Resource": "*"
 		},
 		{
-			"Sid": "CloudWatchRestoreVerification",
+			"Sid": "CloudWatchGrafanaVerification",
 			"Effect": "Allow",
 			"Action": [
 				"cloudwatch:GetMetricStatistics",
+				"cloudwatch:GetMetricStatistics",
+                "cloudwatch:ListMetrics",
 				"cloudwatch:DescribeAlarms",
 				"cloudwatch:DescribeAlarmsForMetric",
 				"logs:FilterLogEvents",
+				"logs:StartQuery",
+                "logs:GetQueryResults",
+                "logs:StopQuery",
+                "logs:DescribeLogGroups",
+                "logs:DescribeLogStreams",
 				"logs:GetLogEvents"
 			],
 			"Resource": "*"
 		},
 		{
-			"Sid": "SNSRestoreVerification",
+			"Sid": "SNSGrafanaVerification",
 			"Effect": "Allow",
 			"Action": [
 				"sns:ListSubscriptions",

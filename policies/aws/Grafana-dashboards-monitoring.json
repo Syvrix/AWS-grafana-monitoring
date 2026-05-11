@@ -27,7 +27,10 @@
             "Effect": "Allow",
             "Action": [
 				"ec2:DescribeSecurityGroups",
-				"ec2:DescribeVpcEndpoints"
+				"ec2:DescribeVpcEndpoints",
+				"ec2:DescribeRegions",
+				"ec2:DescribeSnapshots",
+				"tag:GetResources"
             ],
             "Resource": "*"			
 		},
@@ -85,16 +88,6 @@
 				"sns:ListSubscriptionsByTopic"
 			],
 			"Resource": "*"
-		},
-        {
-            "Sid": "GrafanaUI",
-            "Effect": "Allow",
-            "Action": [
-                "ec2:DescribeRegions",
-                "ec2:DescribeSnapshots",
-                "tag:GetResources"
-            ],
-            "Resource": "*"
-        }
+		}
     ]
 }

@@ -1,0 +1,2116 @@
+{
+  "apiVersion": "dashboard.grafana.app/v2",
+  "kind": "Dashboard",
+  "metadata": {
+    "name": "adclvs2",
+    "namespace": "default",
+    "uid": "7580a321-cda0-4623-8be4-5482a3d65679",
+    "resourceVersion": "1778570650576990",
+    "generation": 30,
+    "creationTimestamp": "2026-05-08T09:41:41Z",
+    "labels": {
+      "grafana.app/deprecatedInternalID": "2687666409803776"
+    },
+    "annotations": {
+      "grafana.app/createdBy": "user:afl1n9ere6cqoc",
+      "grafana.app/folder": "ffl7y33hbi39cc",
+      "grafana.app/saved-from-ui": "Grafana v13.0.1 (a100054f)",
+      "grafana.app/updatedBy": "user:afl1n9ere6cqoc",
+      "grafana.app/updatedTimestamp": "2026-05-12T07:24:10Z",
+      "grafana.app/folderTitle": "Fina",
+      "grafana.app/folderUrl": "/dashboards/f/ffl7y33hbi39cc/fina"
+    }
+  },
+  "spec": {
+    "annotations": [
+      {
+        "kind": "AnnotationQuery",
+        "spec": {
+          "query": {
+            "kind": "DataQuery",
+            "group": "grafana",
+            "version": "v0",
+            "datasource": {
+              "name": "-- Grafana --"
+            },
+            "spec": {}
+          },
+          "enable": true,
+          "hide": true,
+          "iconColor": "rgba(0, 211, 255, 1)",
+          "name": "Annotations & Alerts",
+          "builtIn": true
+        }
+      }
+    ],
+    "cursorSync": "Off",
+    "editable": true,
+    "elements": {
+      "panel-22": {
+        "kind": "Panel",
+        "spec": {
+          "id": 22,
+          "title": "Selected Function",
+          "description": "",
+          "links": [],
+          "data": {
+            "kind": "QueryGroup",
+            "spec": {
+              "queries": [
+                {
+                  "kind": "PanelQuery",
+                  "spec": {
+                    "query": {
+                      "kind": "DataQuery",
+                      "group": "yesoreyeram-infinity-datasource",
+                      "version": "v0",
+                      "datasource": {
+                        "name": "${Datasource}"
+                      },
+                      "spec": {
+                        "columns": [],
+                        "filters": [],
+                        "format": "table",
+                        "global_query_id": "",
+                        "parser": "backend",
+                        "root_selector": "$.Configuration",
+                        "source": "url",
+                        "type": "json",
+                        "url": "https://lambda.eu-north-1.amazonaws.com/2015-03-31/functions/$function",
+                        "url_options": {
+                          "data": "",
+                          "method": "GET"
+                        }
+                      }
+                    },
+                    "refId": "A",
+                    "hidden": false
+                  }
+                }
+              ],
+              "transformations": [
+                {
+                  "kind": "Transformation",
+                  "group": "extractFields",
+                  "spec": {
+                    "options": {
+                      "delimiter": ",",
+                      "format": "json",
+                      "keepTime": false,
+                      "replace": false,
+                      "source": "Architectures"
+                    }
+                  }
+                },
+                {
+                  "kind": "Transformation",
+                  "group": "organize",
+                  "spec": {
+                    "options": {
+                      "excludeByName": {
+                        "0": false,
+                        "Architectures": true,
+                        "CapacityProviderConfig": true,
+                        "CodeSha256": true,
+                        "CodeSize": true,
+                        "ConfigSha256": true,
+                        "DeadLetterConfig": true,
+                        "Description": true,
+                        "DurableConfig": true,
+                        "Environment": true,
+                        "EphemeralStorage": true,
+                        "FunctionArn": true,
+                        "Handler": true,
+                        "ImageConfigResponse": true,
+                        "KMSKeyArn": true,
+                        "LastUpdateStatus": true,
+                        "LastUpdateStatusReason": true,
+                        "LastUpdateStatusReasonCode": true,
+                        "Layers": true,
+                        "LoggingConfig": true,
+                        "MasterArn": true,
+                        "MemorySize": true,
+                        "RevisionId": true,
+                        "Role": true,
+                        "RuntimeVersionConfig": true,
+                        "SigningJobArn": true,
+                        "SigningProfileVersionArn": true,
+                        "SnapStart": true,
+                        "StateReason": true,
+                        "StateReasonCode": true,
+                        "TenancyConfig": true,
+                        "Timeout": true,
+                        "TracingConfig": true,
+                        "Version": true,
+                        "VpcConfig": true
+                      },
+                      "includeByName": {},
+                      "indexByName": {
+                        "0": 2,
+                        "Architectures": 4,
+                        "CapacityProviderConfig": 6,
+                        "CodeSha256": 7,
+                        "CodeSize": 8,
+                        "ConfigSha256": 9,
+                        "DeadLetterConfig": 10,
+                        "Description": 11,
+                        "DurableConfig": 12,
+                        "Environment": 13,
+                        "EphemeralStorage": 14,
+                        "FunctionArn": 15,
+                        "FunctionName": 0,
+                        "Handler": 16,
+                        "ImageConfigResponse": 17,
+                        "KMSKeyArn": 18,
+                        "LastModified": 39,
+                        "LastUpdateStatus": 19,
+                        "LastUpdateStatusReason": 20,
+                        "LastUpdateStatusReasonCode": 21,
+                        "Layers": 22,
+                        "LoggingConfig": 23,
+                        "MasterArn": 24,
+                        "MemorySize": 25,
+                        "PackageType": 5,
+                        "RevisionId": 26,
+                        "Role": 27,
+                        "Runtime": 28,
+                        "RuntimeVersionConfig": 29,
+                        "SigningJobArn": 30,
+                        "SigningProfileVersionArn": 31,
+                        "SnapStart": 32,
+                        "State": 1,
+                        "StateReason": 3,
+                        "StateReasonCode": 33,
+                        "TenancyConfig": 34,
+                        "Timeout": 35,
+                        "TracingConfig": 36,
+                        "Version": 37,
+                        "VpcConfig": 38
+                      },
+                      "orderByMode": "manual",
+                      "renameByName": {
+                        "0": "Architectures",
+                        "VpcConfig": ""
+                      }
+                    }
+                  }
+                }
+              ],
+              "queryOptions": {}
+            }
+          },
+          "vizConfig": {
+            "kind": "VizConfig",
+            "group": "table",
+            "version": "13.0.1",
+            "spec": {
+              "options": {
+                "cellHeight": "sm",
+                "showHeader": true,
+                "sortBy": [
+                  {
+                    "desc": false,
+                    "displayName": "FunctionName"
+                  }
+                ]
+              },
+              "fieldConfig": {
+                "defaults": {
+                  "thresholds": {
+                    "mode": "absolute",
+                    "steps": [
+                      {
+                        "value": 0,
+                        "color": "green"
+                      },
+                      {
+                        "value": 80,
+                        "color": "red"
+                      }
+                    ]
+                  },
+                  "custom": {
+                    "align": "auto",
+                    "cellOptions": {
+                      "type": "auto"
+                    },
+                    "footer": {
+                      "reducers": []
+                    },
+                    "inspect": false
+                  }
+                },
+                "overrides": [
+                  {
+                    "matcher": {
+                      "id": "byName",
+                      "options": "FunctionName"
+                    },
+                    "properties": [
+                      {
+                        "id": "custom.width",
+                        "value": 338
+                      }
+                    ]
+                  },
+                  {
+                    "matcher": {
+                      "id": "byName",
+                      "options": "State"
+                    },
+                    "properties": [
+                      {
+                        "id": "custom.width",
+                        "value": 110
+                      }
+                    ]
+                  },
+                  {
+                    "matcher": {
+                      "id": "byName",
+                      "options": "Architectures"
+                    },
+                    "properties": [
+                      {
+                        "id": "custom.width",
+                        "value": 124
+                      }
+                    ]
+                  },
+                  {
+                    "matcher": {
+                      "id": "byName",
+                      "options": "PackageType"
+                    },
+                    "properties": [
+                      {
+                        "id": "custom.width",
+                        "value": 112
+                      }
+                    ]
+                  },
+                  {
+                    "matcher": {
+                      "id": "byName",
+                      "options": "Runtime"
+                    },
+                    "properties": [
+                      {
+                        "id": "custom.width",
+                        "value": 127
+                      }
+                    ]
+                  },
+                  {
+                    "matcher": {
+                      "id": "byName",
+                      "options": "LastModified"
+                    },
+                    "properties": [
+                      {
+                        "id": "custom.width",
+                        "value": 257
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          }
+        }
+      },
+      "panel-23": {
+        "kind": "Panel",
+        "spec": {
+          "id": 23,
+          "title": "State",
+          "description": "",
+          "links": [],
+          "data": {
+            "kind": "QueryGroup",
+            "spec": {
+              "queries": [
+                {
+                  "kind": "PanelQuery",
+                  "spec": {
+                    "query": {
+                      "kind": "DataQuery",
+                      "group": "datasource",
+                      "version": "v0",
+                      "datasource": {
+                        "name": "-- Dashboard --"
+                      },
+                      "spec": {
+                        "panelId": 22
+                      }
+                    },
+                    "refId": "A",
+                    "hidden": false
+                  }
+                }
+              ],
+              "transformations": [],
+              "queryOptions": {}
+            }
+          },
+          "vizConfig": {
+            "kind": "VizConfig",
+            "group": "stat",
+            "version": "13.0.1",
+            "spec": {
+              "options": {
+                "colorMode": "background_solid",
+                "graphMode": "area",
+                "justifyMode": "auto",
+                "orientation": "auto",
+                "percentChangeColorMode": "standard",
+                "reduceOptions": {
+                  "calcs": [],
+                  "fields": "/^State$/",
+                  "values": false
+                },
+                "showPercentChange": false,
+                "textMode": "auto",
+                "wideLayout": true
+              },
+              "fieldConfig": {
+                "defaults": {
+                  "thresholds": {
+                    "mode": "absolute",
+                    "steps": [
+                      {
+                        "value": 0,
+                        "color": "red"
+                      }
+                    ]
+                  },
+                  "color": {
+                    "mode": "thresholds"
+                  }
+                },
+                "overrides": [
+                  {
+                    "matcher": {
+                      "id": "byName",
+                      "scope": "series",
+                      "options": "State"
+                    },
+                    "properties": [
+                      {
+                        "id": "color"
+                      },
+                      {
+                        "id": "mappings",
+                        "value": [
+                          {
+                            "options": {
+                              "Active": {
+                                "color": "green",
+                                "index": 0
+                              }
+                            },
+                            "type": "value"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          }
+        }
+      },
+      "panel-24": {
+        "kind": "Panel",
+        "spec": {
+          "id": 24,
+          "title": "",
+          "description": "",
+          "links": [],
+          "data": {
+            "kind": "QueryGroup",
+            "spec": {
+              "queries": [
+                {
+                  "kind": "PanelQuery",
+                  "spec": {
+                    "query": {
+                      "kind": "DataQuery",
+                      "group": "datasource",
+                      "version": "v0",
+                      "datasource": {
+                        "name": "-- Dashboard --"
+                      },
+                      "spec": {
+                        "panelId": 22,
+                        "withTransforms": false
+                      }
+                    },
+                    "refId": "A",
+                    "hidden": false
+                  }
+                }
+              ],
+              "transformations": [
+                {
+                  "kind": "Transformation",
+                  "group": "filterFieldsByName",
+                  "spec": {
+                    "options": {
+                      "byVariable": false,
+                      "include": {
+                        "pattern": "FunctionName"
+                      }
+                    }
+                  }
+                }
+              ],
+              "queryOptions": {}
+            }
+          },
+          "vizConfig": {
+            "kind": "VizConfig",
+            "group": "stat",
+            "version": "13.0.1",
+            "spec": {
+              "options": {
+                "colorMode": "value",
+                "graphMode": "area",
+                "justifyMode": "auto",
+                "orientation": "auto",
+                "percentChangeColorMode": "standard",
+                "reduceOptions": {
+                  "calcs": [
+                    "sum"
+                  ],
+                  "fields": "/^FunctionName$/",
+                  "values": true
+                },
+                "showPercentChange": false,
+                "textMode": "value_and_name",
+                "wideLayout": false
+              },
+              "fieldConfig": {
+                "defaults": {
+                  "thresholds": {
+                    "mode": "absolute",
+                    "steps": [
+                      {
+                        "value": 0,
+                        "color": "blue"
+                      }
+                    ]
+                  },
+                  "color": {
+                    "mode": "thresholds"
+                  }
+                },
+                "overrides": []
+              }
+            }
+          }
+        }
+      },
+      "panel-25": {
+        "kind": "Panel",
+        "spec": {
+          "id": 25,
+          "title": "Versions",
+          "description": "",
+          "links": [],
+          "data": {
+            "kind": "QueryGroup",
+            "spec": {
+              "queries": [
+                {
+                  "kind": "PanelQuery",
+                  "spec": {
+                    "query": {
+                      "kind": "DataQuery",
+                      "group": "yesoreyeram-infinity-datasource",
+                      "version": "v0",
+                      "datasource": {
+                        "name": "${Datasource}"
+                      },
+                      "spec": {
+                        "columns": [],
+                        "filters": [],
+                        "format": "table",
+                        "global_query_id": "",
+                        "parser": "backend",
+                        "root_selector": "$.Versions",
+                        "source": "url",
+                        "type": "json",
+                        "url": "https://lambda.eu-north-1.amazonaws.com/2015-03-31/functions/$function/versions",
+                        "url_options": {
+                          "data": "",
+                          "method": "GET"
+                        }
+                      }
+                    },
+                    "refId": "A",
+                    "hidden": false
+                  }
+                }
+              ],
+              "transformations": [
+                {
+                  "kind": "Transformation",
+                  "group": "extractFields",
+                  "spec": {
+                    "disabled": true,
+                    "options": {
+                      "delimiter": ",",
+                      "format": "json",
+                      "keepTime": false,
+                      "replace": false,
+                      "source": "Architectures"
+                    }
+                  }
+                },
+                {
+                  "kind": "Transformation",
+                  "group": "organize",
+                  "spec": {
+                    "options": {
+                      "excludeByName": {
+                        "0": false,
+                        "Architectures": true,
+                        "CapacityProviderConfig": true,
+                        "CodeSha256": true,
+                        "CodeSize": true,
+                        "ConfigSha256": true,
+                        "DeadLetterConfig": true,
+                        "Description": false,
+                        "DurableConfig": true,
+                        "Environment": true,
+                        "EphemeralStorage": true,
+                        "FunctionArn": true,
+                        "Handler": true,
+                        "ImageConfigResponse": true,
+                        "KMSKeyArn": true,
+                        "LastModified": false,
+                        "LastUpdateStatus": true,
+                        "LastUpdateStatusReason": true,
+                        "LastUpdateStatusReasonCode": true,
+                        "Layers": true,
+                        "LoggingConfig": true,
+                        "MasterArn": true,
+                        "MemorySize": true,
+                        "PackageType": true,
+                        "RevisionId": false,
+                        "Role": true,
+                        "Runtime": true,
+                        "RuntimeVersionConfig": true,
+                        "SigningJobArn": true,
+                        "SigningProfileVersionArn": true,
+                        "SnapStart": true,
+                        "State": true,
+                        "StateReason": true,
+                        "StateReasonCode": true,
+                        "TenancyConfig": true,
+                        "Timeout": true,
+                        "TracingConfig": true,
+                        "Version": false,
+                        "VpcConfig": true
+                      },
+                      "includeByName": {},
+                      "indexByName": {
+                        "Architectures": 5,
+                        "CapacityProviderConfig": 7,
+                        "CodeSha256": 8,
+                        "CodeSize": 9,
+                        "ConfigSha256": 10,
+                        "DeadLetterConfig": 11,
+                        "Description": 2,
+                        "DurableConfig": 12,
+                        "Environment": 13,
+                        "EphemeralStorage": 14,
+                        "FunctionArn": 15,
+                        "FunctionName": 0,
+                        "Handler": 16,
+                        "ImageConfigResponse": 17,
+                        "KMSKeyArn": 18,
+                        "LastModified": 38,
+                        "LastUpdateStatus": 19,
+                        "LastUpdateStatusReason": 20,
+                        "LastUpdateStatusReasonCode": 21,
+                        "Layers": 22,
+                        "LoggingConfig": 23,
+                        "MasterArn": 24,
+                        "MemorySize": 25,
+                        "PackageType": 6,
+                        "RevisionId": 1,
+                        "Role": 26,
+                        "Runtime": 27,
+                        "RuntimeVersionConfig": 28,
+                        "SigningJobArn": 29,
+                        "SigningProfileVersionArn": 30,
+                        "SnapStart": 31,
+                        "State": 3,
+                        "StateReason": 4,
+                        "StateReasonCode": 32,
+                        "TenancyConfig": 33,
+                        "Timeout": 34,
+                        "TracingConfig": 35,
+                        "Version": 36,
+                        "VpcConfig": 37
+                      },
+                      "orderByMode": "manual",
+                      "renameByName": {
+                        "0": "Architectures",
+                        "VpcConfig": ""
+                      }
+                    }
+                  }
+                }
+              ],
+              "queryOptions": {}
+            }
+          },
+          "vizConfig": {
+            "kind": "VizConfig",
+            "group": "table",
+            "version": "13.0.1",
+            "spec": {
+              "options": {
+                "cellHeight": "sm",
+                "showHeader": true,
+                "sortBy": [
+                  {
+                    "desc": false,
+                    "displayName": "State"
+                  }
+                ]
+              },
+              "fieldConfig": {
+                "defaults": {
+                  "thresholds": {
+                    "mode": "absolute",
+                    "steps": [
+                      {
+                        "value": 0,
+                        "color": "green"
+                      },
+                      {
+                        "value": 80,
+                        "color": "red"
+                      }
+                    ]
+                  },
+                  "custom": {
+                    "align": "auto",
+                    "cellOptions": {
+                      "type": "auto"
+                    },
+                    "footer": {
+                      "reducers": []
+                    },
+                    "inspect": false
+                  }
+                },
+                "overrides": [
+                  {
+                    "matcher": {
+                      "id": "byName",
+                      "options": "FunctionName"
+                    },
+                    "properties": [
+                      {
+                        "id": "custom.width",
+                        "value": 339
+                      }
+                    ]
+                  },
+                  {
+                    "matcher": {
+                      "id": "byName",
+                      "options": "State"
+                    },
+                    "properties": [
+                      {
+                        "id": "custom.width",
+                        "value": 110
+                      }
+                    ]
+                  },
+                  {
+                    "matcher": {
+                      "id": "byName",
+                      "options": "Architectures"
+                    },
+                    "properties": [
+                      {
+                        "id": "custom.width",
+                        "value": 124
+                      }
+                    ]
+                  },
+                  {
+                    "matcher": {
+                      "id": "byName",
+                      "options": "PackageType"
+                    },
+                    "properties": [
+                      {
+                        "id": "custom.width",
+                        "value": 112
+                      }
+                    ]
+                  },
+                  {
+                    "matcher": {
+                      "id": "byName",
+                      "options": "Runtime"
+                    },
+                    "properties": [
+                      {
+                        "id": "custom.width",
+                        "value": 127
+                      }
+                    ]
+                  },
+                  {
+                    "matcher": {
+                      "id": "byName",
+                      "options": "LastModified"
+                    },
+                    "properties": [
+                      {
+                        "id": "custom.width",
+                        "value": 257
+                      }
+                    ]
+                  },
+                  {
+                    "matcher": {
+                      "id": "byName",
+                      "options": "RevisionId"
+                    },
+                    "properties": [
+                      {
+                        "id": "custom.width",
+                        "value": 306
+                      }
+                    ]
+                  },
+                  {
+                    "matcher": {
+                      "id": "byName",
+                      "options": "Version"
+                    },
+                    "properties": [
+                      {
+                        "id": "custom.width",
+                        "value": 112
+                      }
+                    ]
+                  },
+                  {
+                    "matcher": {
+                      "id": "byName",
+                      "options": "Description"
+                    },
+                    "properties": [
+                      {
+                        "id": "custom.width",
+                        "value": 426
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          }
+        }
+      },
+      "panel-26": {
+        "kind": "Panel",
+        "spec": {
+          "id": 26,
+          "title": "Error log",
+          "description": "",
+          "links": [],
+          "data": {
+            "kind": "QueryGroup",
+            "spec": {
+              "queries": [
+                {
+                  "kind": "PanelQuery",
+                  "spec": {
+                    "query": {
+                      "kind": "DataQuery",
+                      "group": "cloudwatch",
+                      "version": "v0",
+                      "datasource": {
+                        "name": "${cloudwatch_datasource}"
+                      },
+                      "spec": {
+                        "dimensions": {},
+                        "expression": "fields @timestamp, @message, @logStream\n| filter @message like /ERROR/\n| sort @timestamp desc",
+                        "id": "",
+                        "label": "",
+                        "logGroupClass": "STANDARD",
+                        "logGroupPrefixes": [
+                          "/aws/lambda/$function",
+                          "/fina/lambda/$function_regex"
+                        ],
+                        "logGroups": [],
+                        "logsQueryScope": "namePrefix",
+                        "matchExact": false,
+                        "metricEditorMode": 1,
+                        "metricName": "",
+                        "metricQueryType": 0,
+                        "namespace": "AWS/Lambda",
+                        "period": "",
+                        "queryLanguage": "CWLI",
+                        "queryMode": "Logs",
+                        "region": "default",
+                        "sqlExpression": "",
+                        "statistic": "Average",
+                        "statsGroups": []
+                      }
+                    },
+                    "refId": "A",
+                    "hidden": false
+                  }
+                }
+              ],
+              "transformations": [],
+              "queryOptions": {}
+            }
+          },
+          "vizConfig": {
+            "kind": "VizConfig",
+            "group": "logs",
+            "version": "13.0.1",
+            "spec": {
+              "options": {
+                "dedupStrategy": "none",
+                "enableInfiniteScrolling": false,
+                "enableLogDetails": true,
+                "fontSize": "default",
+                "prettifyLogMessage": true,
+                "showControls": false,
+                "showFieldSelector": false,
+                "showLabels": false,
+                "showLevel": true,
+                "showTime": true,
+                "sortOrder": "Descending",
+                "syntaxHighlighting": true,
+                "timestampResolution": "ms",
+                "unwrappedColumns": false,
+                "wrapLogMessage": false
+              },
+              "fieldConfig": {
+                "defaults": {},
+                "overrides": []
+              }
+            }
+          }
+        }
+      },
+      "panel-27": {
+        "kind": "Panel",
+        "spec": {
+          "id": 27,
+          "title": "Errors",
+          "description": "",
+          "links": [],
+          "data": {
+            "kind": "QueryGroup",
+            "spec": {
+              "queries": [
+                {
+                  "kind": "PanelQuery",
+                  "spec": {
+                    "query": {
+                      "kind": "DataQuery",
+                      "group": "datasource",
+                      "version": "v0",
+                      "datasource": {
+                        "name": "-- Dashboard --"
+                      },
+                      "spec": {
+                        "panelId": 26
+                      }
+                    },
+                    "refId": "A",
+                    "hidden": false
+                  }
+                }
+              ],
+              "transformations": [
+                {
+                  "kind": "Transformation",
+                  "group": "reduce",
+                  "spec": {
+                    "options": {
+                      "includeTimeField": false,
+                      "labelsToFields": false,
+                      "mode": "reduceFields",
+                      "reducers": [
+                        "count",
+                        "sum"
+                      ]
+                    }
+                  }
+                }
+              ],
+              "queryOptions": {}
+            }
+          },
+          "vizConfig": {
+            "kind": "VizConfig",
+            "group": "stat",
+            "version": "13.0.1",
+            "spec": {
+              "options": {
+                "colorMode": "background_solid",
+                "graphMode": "area",
+                "justifyMode": "auto",
+                "orientation": "auto",
+                "percentChangeColorMode": "standard",
+                "reduceOptions": {
+                  "calcs": [
+                    "sum"
+                  ],
+                  "fields": "/^Count$/",
+                  "values": false
+                },
+                "showPercentChange": false,
+                "textMode": "value",
+                "wideLayout": true
+              },
+              "fieldConfig": {
+                "defaults": {
+                  "mappings": [
+                    {
+                      "type": "special",
+                      "options": {
+                        "match": "null",
+                        "result": {
+                          "text": "No Errors",
+                          "color": "blue",
+                          "index": 0
+                        }
+                      }
+                    }
+                  ],
+                  "thresholds": {
+                    "mode": "absolute",
+                    "steps": [
+                      {
+                        "value": 0,
+                        "color": "green"
+                      },
+                      {
+                        "value": 1,
+                        "color": "red"
+                      }
+                    ]
+                  },
+                  "color": {
+                    "mode": "thresholds"
+                  },
+                  "noValue": "0",
+                  "fieldMinMax": false
+                },
+                "overrides": []
+              }
+            }
+          }
+        }
+      },
+      "panel-29": {
+        "kind": "Panel",
+        "spec": {
+          "id": 29,
+          "title": "Function Logs (50)",
+          "description": "",
+          "links": [],
+          "data": {
+            "kind": "QueryGroup",
+            "spec": {
+              "queries": [
+                {
+                  "kind": "PanelQuery",
+                  "spec": {
+                    "query": {
+                      "kind": "DataQuery",
+                      "group": "cloudwatch",
+                      "version": "v0",
+                      "datasource": {
+                        "name": "${cloudwatch_datasource}"
+                      },
+                      "spec": {
+                        "dimensions": {},
+                        "expression": "fields @timestamp, @message, @logStream\n| sort @timestamp desc\n| limit 50",
+                        "id": "",
+                        "label": "",
+                        "logGroupClass": "STANDARD",
+                        "logGroupPrefixes": [
+                          "/aws/lambda/$function",
+                          "/fina/lambda/$function_regex"
+                        ],
+                        "logGroups": [],
+                        "logsQueryScope": "namePrefix",
+                        "matchExact": false,
+                        "metricEditorMode": 1,
+                        "metricName": "",
+                        "metricQueryType": 0,
+                        "namespace": "AWS/Lambda",
+                        "period": "",
+                        "queryLanguage": "CWLI",
+                        "queryMode": "Logs",
+                        "region": "default",
+                        "sqlExpression": "",
+                        "statistic": "Average",
+                        "statsGroups": []
+                      }
+                    },
+                    "refId": "A",
+                    "hidden": false
+                  }
+                }
+              ],
+              "transformations": [],
+              "queryOptions": {}
+            }
+          },
+          "vizConfig": {
+            "kind": "VizConfig",
+            "group": "logs",
+            "version": "13.0.1",
+            "spec": {
+              "options": {
+                "dedupStrategy": "none",
+                "displayedFields": [],
+                "enableInfiniteScrolling": false,
+                "enableLogDetails": true,
+                "fontSize": "default",
+                "prettifyLogMessage": true,
+                "showControls": false,
+                "showFieldSelector": false,
+                "showLabels": false,
+                "showLevel": false,
+                "showTime": true,
+                "sortOrder": "Descending",
+                "syntaxHighlighting": true,
+                "timestampResolution": "ms",
+                "unwrappedColumns": false,
+                "wrapLogMessage": false
+              },
+              "fieldConfig": {
+                "defaults": {},
+                "overrides": []
+              }
+            }
+          }
+        }
+      },
+      "panel-30": {
+        "kind": "Panel",
+        "spec": {
+          "id": 30,
+          "title": "Total Functions",
+          "description": "",
+          "links": [],
+          "data": {
+            "kind": "QueryGroup",
+            "spec": {
+              "queries": [
+                {
+                  "kind": "PanelQuery",
+                  "spec": {
+                    "query": {
+                      "kind": "DataQuery",
+                      "group": "datasource",
+                      "version": "v0",
+                      "datasource": {
+                        "name": "-- Dashboard --"
+                      },
+                      "spec": {
+                        "panelId": 32
+                      }
+                    },
+                    "refId": "A",
+                    "hidden": false
+                  }
+                }
+              ],
+              "transformations": [
+                {
+                  "kind": "Transformation",
+                  "group": "reduce",
+                  "spec": {
+                    "options": {
+                      "includeTimeField": false,
+                      "mode": "seriesToRows",
+                      "reducers": [
+                        "countAll"
+                      ]
+                    }
+                  }
+                }
+              ],
+              "queryOptions": {}
+            }
+          },
+          "vizConfig": {
+            "kind": "VizConfig",
+            "group": "stat",
+            "version": "13.0.1",
+            "spec": {
+              "options": {
+                "colorMode": "background",
+                "graphMode": "area",
+                "justifyMode": "auto",
+                "orientation": "auto",
+                "percentChangeColorMode": "standard",
+                "reduceOptions": {
+                  "calcs": [],
+                  "fields": "",
+                  "values": false
+                },
+                "showPercentChange": false,
+                "textMode": "auto",
+                "wideLayout": true
+              },
+              "fieldConfig": {
+                "defaults": {
+                  "thresholds": {
+                    "mode": "absolute",
+                    "steps": [
+                      {
+                        "value": 0,
+                        "color": "blue"
+                      }
+                    ]
+                  },
+                  "color": {
+                    "mode": "thresholds"
+                  }
+                },
+                "overrides": []
+              }
+            }
+          }
+        }
+      },
+      "panel-31": {
+        "kind": "Panel",
+        "spec": {
+          "id": 31,
+          "title": "Last modified Functions",
+          "description": "",
+          "links": [],
+          "data": {
+            "kind": "QueryGroup",
+            "spec": {
+              "queries": [
+                {
+                  "kind": "PanelQuery",
+                  "spec": {
+                    "query": {
+                      "kind": "DataQuery",
+                      "group": "datasource",
+                      "version": "v0",
+                      "datasource": {
+                        "name": "-- Dashboard --"
+                      },
+                      "spec": {
+                        "panelId": 32
+                      }
+                    },
+                    "refId": "A",
+                    "hidden": false
+                  }
+                }
+              ],
+              "transformations": [
+                {
+                  "kind": "Transformation",
+                  "group": "sortBy",
+                  "spec": {
+                    "options": {
+                      "fields": {},
+                      "sort": [
+                        {
+                          "desc": true,
+                          "field": "LastModified"
+                        }
+                      ]
+                    }
+                  }
+                },
+                {
+                  "kind": "Transformation",
+                  "group": "organize",
+                  "spec": {
+                    "options": {
+                      "excludeByName": {
+                        "Architectures": true,
+                        "CapacityProviderConfig": true,
+                        "CodeSha256": true,
+                        "CodeSize": true,
+                        "ConfigSha256": true,
+                        "DeadLetterConfig": true,
+                        "Description": true,
+                        "DurableConfig": true,
+                        "Environment": true,
+                        "EphemeralStorage": true,
+                        "FunctionArn": true,
+                        "FunctionName": false,
+                        "Handler": true,
+                        "ImageConfigResponse": true,
+                        "KMSKeyArn": true,
+                        "LastModified": false,
+                        "LastUpdateStatus": true,
+                        "LastUpdateStatusReason": true,
+                        "LastUpdateStatusReasonCode": true,
+                        "Layers": true,
+                        "LoggingConfig": true,
+                        "MasterArn": true,
+                        "MemorySize": true,
+                        "PackageType": true,
+                        "RevisionId": true,
+                        "Role": true,
+                        "Runtime": true,
+                        "RuntimeVersionConfig": true,
+                        "SigningJobArn": true,
+                        "SigningProfileVersionArn": true,
+                        "SnapStart": true,
+                        "State": true,
+                        "StateReason": true,
+                        "StateReasonCode": true,
+                        "TenancyConfig": true,
+                        "Timeout": true,
+                        "TracingConfig": true,
+                        "Version": true,
+                        "VpcConfig": true
+                      },
+                      "includeByName": {},
+                      "indexByName": {
+                        "Architectures": 0,
+                        "CapacityProviderConfig": 1,
+                        "CodeSha256": 2,
+                        "CodeSize": 3,
+                        "ConfigSha256": 4,
+                        "DeadLetterConfig": 5,
+                        "Description": 11,
+                        "DurableConfig": 6,
+                        "Environment": 7,
+                        "EphemeralStorage": 8,
+                        "FunctionArn": 9,
+                        "FunctionName": 10,
+                        "Handler": 12,
+                        "ImageConfigResponse": 13,
+                        "KMSKeyArn": 14,
+                        "LastModified": 15,
+                        "LastUpdateStatus": 16,
+                        "LastUpdateStatusReason": 17,
+                        "LastUpdateStatusReasonCode": 18,
+                        "Layers": 19,
+                        "LoggingConfig": 20,
+                        "MasterArn": 21,
+                        "MemorySize": 22,
+                        "PackageType": 23,
+                        "RevisionId": 24,
+                        "Role": 25,
+                        "Runtime": 26,
+                        "RuntimeVersionConfig": 27,
+                        "SigningJobArn": 28,
+                        "SigningProfileVersionArn": 29,
+                        "SnapStart": 30,
+                        "State": 31,
+                        "StateReason": 32,
+                        "StateReasonCode": 33,
+                        "TenancyConfig": 34,
+                        "Timeout": 35,
+                        "TracingConfig": 36,
+                        "Version": 37,
+                        "VpcConfig": 38
+                      },
+                      "renameByName": {
+                        "LastModified": "",
+                        "LastUpdateStatus": "Status",
+                        "LastUpdateStatusReason": "Status Reason",
+                        "LastUpdateStatusReasonCode": "Reason Code",
+                        "Runtime": ""
+                      }
+                    }
+                  }
+                },
+                {
+                  "kind": "Transformation",
+                  "group": "convertFieldType",
+                  "spec": {
+                    "options": {
+                      "conversions": [
+                        {
+                          "destinationType": "time",
+                          "targetField": "LastModified"
+                        }
+                      ],
+                      "fields": {}
+                    }
+                  }
+                }
+              ],
+              "queryOptions": {}
+            }
+          },
+          "vizConfig": {
+            "kind": "VizConfig",
+            "group": "table",
+            "version": "13.0.1",
+            "spec": {
+              "options": {
+                "cellHeight": "sm",
+                "showHeader": true,
+                "sortBy": []
+              },
+              "fieldConfig": {
+                "defaults": {
+                  "thresholds": {
+                    "mode": "absolute",
+                    "steps": [
+                      {
+                        "value": 0,
+                        "color": "green"
+                      },
+                      {
+                        "value": 80,
+                        "color": "red"
+                      }
+                    ]
+                  },
+                  "color": {
+                    "mode": "thresholds"
+                  },
+                  "custom": {
+                    "align": "auto",
+                    "cellOptions": {
+                      "type": "auto"
+                    },
+                    "footer": {
+                      "reducers": []
+                    },
+                    "inspect": false
+                  }
+                },
+                "overrides": [
+                  {
+                    "matcher": {
+                      "id": "byName",
+                      "options": "LastUpdateStatus"
+                    },
+                    "properties": [
+                      {
+                        "id": "custom.width",
+                        "value": 185
+                      }
+                    ]
+                  },
+                  {
+                    "matcher": {
+                      "id": "byName",
+                      "options": "LastUpdateStatusReason"
+                    },
+                    "properties": [
+                      {
+                        "id": "custom.width",
+                        "value": 284
+                      }
+                    ]
+                  },
+                  {
+                    "matcher": {
+                      "id": "byName",
+                      "options": "LastUpdateStatusReasonCode"
+                    },
+                    "properties": [
+                      {
+                        "id": "custom.width",
+                        "value": 227
+                      }
+                    ]
+                  },
+                  {
+                    "matcher": {
+                      "id": "byName",
+                      "options": "LastModified"
+                    },
+                    "properties": [
+                      {
+                        "id": "custom.width",
+                        "value": 253
+                      }
+                    ]
+                  },
+                  {
+                    "matcher": {
+                      "id": "byName",
+                      "options": "FunctionName"
+                    },
+                    "properties": [
+                      {
+                        "id": "custom.width",
+                        "value": 306
+                      }
+                    ]
+                  },
+                  {
+                    "matcher": {
+                      "id": "byName",
+                      "options": "Status"
+                    },
+                    "properties": [
+                      {
+                        "id": "custom.width",
+                        "value": 99
+                      }
+                    ]
+                  },
+                  {
+                    "matcher": {
+                      "id": "byName",
+                      "options": "Status Reason"
+                    },
+                    "properties": [
+                      {
+                        "id": "custom.width",
+                        "value": 193
+                      }
+                    ]
+                  },
+                  {
+                    "matcher": {
+                      "id": "byName",
+                      "options": "Reason Code"
+                    },
+                    "properties": [
+                      {
+                        "id": "custom.width",
+                        "value": 165
+                      }
+                    ]
+                  },
+                  {
+                    "matcher": {
+                      "id": "byName",
+                      "options": "Description"
+                    },
+                    "properties": [
+                      {
+                        "id": "custom.width",
+                        "value": 521
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          }
+        }
+      },
+      "panel-32": {
+        "kind": "Panel",
+        "spec": {
+          "id": 32,
+          "title": "All Functions",
+          "description": "",
+          "links": [],
+          "data": {
+            "kind": "QueryGroup",
+            "spec": {
+              "queries": [
+                {
+                  "kind": "PanelQuery",
+                  "spec": {
+                    "query": {
+                      "kind": "DataQuery",
+                      "group": "yesoreyeram-infinity-datasource",
+                      "version": "v0",
+                      "datasource": {
+                        "name": "${Datasource}"
+                      },
+                      "spec": {
+                        "columns": [],
+                        "filters": [],
+                        "format": "table",
+                        "global_query_id": "",
+                        "parser": "backend",
+                        "root_selector": "$.Functions",
+                        "source": "url",
+                        "type": "json",
+                        "url": "https://lambda.eu-north-1.amazonaws.com/2015-03-31/functions?MaxItems=1000",
+                        "url_options": {
+                          "data": "",
+                          "method": "GET"
+                        }
+                      }
+                    },
+                    "refId": "A",
+                    "hidden": false
+                  }
+                }
+              ],
+              "transformations": [
+                {
+                  "kind": "Transformation",
+                  "group": "organize",
+                  "spec": {
+                    "options": {
+                      "excludeByName": {
+                        "Architectures": true,
+                        "CapacityProviderConfig": true,
+                        "CodeSha256": true,
+                        "CodeSize": true,
+                        "ConfigSha256": true,
+                        "DeadLetterConfig": true,
+                        "DurableConfig": true,
+                        "Environment": true,
+                        "EphemeralStorage": true,
+                        "FunctionArn": true,
+                        "Handler": true,
+                        "ImageConfigResponse": true,
+                        "KMSKeyArn": true,
+                        "LastModified": true,
+                        "LastUpdateStatus": true,
+                        "LastUpdateStatusReason": true,
+                        "LastUpdateStatusReasonCode": true,
+                        "Layers": true,
+                        "LoggingConfig": true,
+                        "MasterArn": true,
+                        "MemorySize": true,
+                        "PackageType": true,
+                        "RevisionId": true,
+                        "Role": true,
+                        "RuntimeVersionConfig": true,
+                        "SigningJobArn": true,
+                        "SigningProfileVersionArn": true,
+                        "SnapStart": true,
+                        "State": false,
+                        "StateReason": true,
+                        "StateReasonCode": true,
+                        "TenancyConfig": true,
+                        "Timeout": true,
+                        "TracingConfig": true,
+                        "Version": true,
+                        "VpcConfig": true
+                      },
+                      "includeByName": {},
+                      "indexByName": {
+                        "Architectures": 9,
+                        "CapacityProviderConfig": 4,
+                        "CodeSha256": 5,
+                        "CodeSize": 6,
+                        "ConfigSha256": 7,
+                        "DeadLetterConfig": 8,
+                        "Description": 3,
+                        "DurableConfig": 10,
+                        "Environment": 11,
+                        "EphemeralStorage": 12,
+                        "FunctionArn": 2,
+                        "FunctionName": 1,
+                        "Handler": 13,
+                        "ImageConfigResponse": 14,
+                        "KMSKeyArn": 15,
+                        "LastModified": 16,
+                        "LastUpdateStatus": 17,
+                        "LastUpdateStatusReason": 18,
+                        "LastUpdateStatusReasonCode": 19,
+                        "Layers": 20,
+                        "LoggingConfig": 21,
+                        "MasterArn": 22,
+                        "MemorySize": 23,
+                        "PackageType": 24,
+                        "RevisionId": 25,
+                        "Role": 26,
+                        "Runtime": 27,
+                        "RuntimeVersionConfig": 28,
+                        "SigningJobArn": 29,
+                        "SigningProfileVersionArn": 30,
+                        "SnapStart": 31,
+                        "State": 0,
+                        "StateReason": 32,
+                        "StateReasonCode": 33,
+                        "TenancyConfig": 34,
+                        "Timeout": 35,
+                        "TracingConfig": 36,
+                        "Version": 37,
+                        "VpcConfig": 38
+                      },
+                      "renameByName": {}
+                    }
+                  }
+                }
+              ],
+              "queryOptions": {}
+            }
+          },
+          "vizConfig": {
+            "kind": "VizConfig",
+            "group": "table",
+            "version": "13.0.1",
+            "spec": {
+              "options": {
+                "cellHeight": "sm",
+                "showHeader": true,
+                "sortBy": [
+                  {
+                    "desc": false,
+                    "displayName": "Runtime"
+                  }
+                ]
+              },
+              "fieldConfig": {
+                "defaults": {
+                  "thresholds": {
+                    "mode": "absolute",
+                    "steps": [
+                      {
+                        "value": 0,
+                        "color": "green"
+                      },
+                      {
+                        "value": 80,
+                        "color": "red"
+                      }
+                    ]
+                  },
+                  "color": {
+                    "mode": "thresholds"
+                  },
+                  "custom": {
+                    "align": "auto",
+                    "cellOptions": {
+                      "type": "auto"
+                    },
+                    "footer": {
+                      "reducers": []
+                    },
+                    "inspect": false
+                  }
+                },
+                "overrides": [
+                  {
+                    "matcher": {
+                      "id": "byName",
+                      "options": "FunctionName"
+                    },
+                    "properties": [
+                      {
+                        "id": "custom.width",
+                        "value": 427
+                      }
+                    ]
+                  },
+                  {
+                    "matcher": {
+                      "id": "byName",
+                      "options": "SnapStart"
+                    },
+                    "properties": [
+                      {
+                        "id": "custom.width",
+                        "value": 336
+                      }
+                    ]
+                  },
+                  {
+                    "matcher": {
+                      "id": "byName",
+                      "options": "Description"
+                    },
+                    "properties": [
+                      {
+                        "id": "custom.width",
+                        "value": 510
+                      }
+                    ]
+                  },
+                  {
+                    "matcher": {
+                      "id": "byName",
+                      "options": "Runtime"
+                    },
+                    "properties": [
+                      {
+                        "id": "custom.width",
+                        "value": 122
+                      }
+                    ]
+                  },
+                  {
+                    "matcher": {
+                      "id": "byName",
+                      "options": "State"
+                    },
+                    "properties": [
+                      {
+                        "id": "custom.width",
+                        "value": 111
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    "layout": {
+      "kind": "RowsLayout",
+      "spec": {
+        "rows": [
+          {
+            "kind": "RowsLayoutRow",
+            "spec": {
+              "title": "Overview",
+              "collapse": false,
+              "layout": {
+                "kind": "TabsLayout",
+                "spec": {
+                  "tabs": [
+                    {
+                      "kind": "TabsLayoutTab",
+                      "spec": {
+                        "title": "Default",
+                        "layout": {
+                          "kind": "GridLayout",
+                          "spec": {
+                            "items": []
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "kind": "TabsLayoutTab",
+                      "spec": {
+                        "title": "In progress",
+                        "layout": {
+                          "kind": "GridLayout",
+                          "spec": {
+                            "items": [
+                              {
+                                "kind": "GridLayoutItem",
+                                "spec": {
+                                  "x": 0,
+                                  "y": 0,
+                                  "width": 3,
+                                  "height": 4,
+                                  "element": {
+                                    "kind": "ElementReference",
+                                    "name": "panel-30"
+                                  }
+                                }
+                              },
+                              {
+                                "kind": "GridLayoutItem",
+                                "spec": {
+                                  "x": 17,
+                                  "y": 0,
+                                  "width": 7,
+                                  "height": 10,
+                                  "element": {
+                                    "kind": "ElementReference",
+                                    "name": "panel-31"
+                                  }
+                                }
+                              },
+                              {
+                                "kind": "GridLayoutItem",
+                                "spec": {
+                                  "x": 0,
+                                  "y": 4,
+                                  "width": 17,
+                                  "height": 8,
+                                  "element": {
+                                    "kind": "ElementReference",
+                                    "name": "panel-32"
+                                  }
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          {
+            "kind": "RowsLayoutRow",
+            "spec": {
+              "title": "Selected Function Details",
+              "collapse": false,
+              "layout": {
+                "kind": "GridLayout",
+                "spec": {
+                  "items": [
+                    {
+                      "kind": "GridLayoutItem",
+                      "spec": {
+                        "x": 0,
+                        "y": 0,
+                        "width": 2,
+                        "height": 3,
+                        "element": {
+                          "kind": "ElementReference",
+                          "name": "panel-23"
+                        }
+                      }
+                    },
+                    {
+                      "kind": "GridLayoutItem",
+                      "spec": {
+                        "x": 2,
+                        "y": 0,
+                        "width": 4,
+                        "height": 3,
+                        "element": {
+                          "kind": "ElementReference",
+                          "name": "panel-24"
+                        }
+                      }
+                    },
+                    {
+                      "kind": "GridLayoutItem",
+                      "spec": {
+                        "x": 13,
+                        "y": 0,
+                        "width": 2,
+                        "height": 3,
+                        "element": {
+                          "kind": "ElementReference",
+                          "name": "panel-27"
+                        }
+                      }
+                    },
+                    {
+                      "kind": "GridLayoutItem",
+                      "spec": {
+                        "x": 0,
+                        "y": 3,
+                        "width": 13,
+                        "height": 4,
+                        "element": {
+                          "kind": "ElementReference",
+                          "name": "panel-22"
+                        }
+                      }
+                    },
+                    {
+                      "kind": "GridLayoutItem",
+                      "spec": {
+                        "x": 13,
+                        "y": 3,
+                        "width": 11,
+                        "height": 10,
+                        "element": {
+                          "kind": "ElementReference",
+                          "name": "panel-26"
+                        }
+                      }
+                    },
+                    {
+                      "kind": "GridLayoutItem",
+                      "spec": {
+                        "x": 0,
+                        "y": 7,
+                        "width": 13,
+                        "height": 6,
+                        "element": {
+                          "kind": "ElementReference",
+                          "name": "panel-25"
+                        }
+                      }
+                    },
+                    {
+                      "kind": "GridLayoutItem",
+                      "spec": {
+                        "x": 13,
+                        "y": 13,
+                        "width": 11,
+                        "height": 10,
+                        "element": {
+                          "kind": "ElementReference",
+                          "name": "panel-29"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        ]
+      }
+    },
+    "links": [],
+    "liveNow": false,
+    "preload": false,
+    "tags": [],
+    "timeSettings": {
+      "timezone": "browser",
+      "from": "now-30d",
+      "to": "now",
+      "autoRefresh": "",
+      "autoRefreshIntervals": [
+        "5s",
+        "10s",
+        "30s",
+        "1m",
+        "5m",
+        "15m",
+        "30m",
+        "1h",
+        "2h",
+        "1d"
+      ],
+      "hideTimepicker": false,
+      "fiscalYearStartMonth": 0
+    },
+    "title": "AWS-Lambda-info",
+    "variables": [
+      {
+        "kind": "DatasourceVariable",
+        "spec": {
+          "name": "Datasource",
+          "pluginId": "yesoreyeram-infinity-datasource",
+          "refresh": "onDashboardLoad",
+          "regex": "",
+          "current": {
+            "text": "infinity.lambda.staging-afo",
+            "value": "cfl7oig0ttc74a"
+          },
+          "options": [],
+          "multi": false,
+          "includeAll": false,
+          "label": "Datasource",
+          "hide": "dontHide",
+          "skipUrlSync": false,
+          "description": "",
+          "allowCustomValue": true
+        }
+      },
+      {
+        "kind": "DatasourceVariable",
+        "spec": {
+          "name": "cloudwatch_datasource",
+          "pluginId": "cloudwatch",
+          "refresh": "onDashboardLoad",
+          "regex": "",
+          "current": {
+            "text": "cloudwatch.staging-afo",
+            "value": "bfl7y664y2j9ca"
+          },
+          "options": [],
+          "multi": false,
+          "includeAll": false,
+          "label": "cloudwatch_datasource",
+          "hide": "dontHide",
+          "skipUrlSync": false,
+          "description": "datasource for the cloudwatch to get functions",
+          "allowCustomValue": true
+        }
+      },
+      {
+        "kind": "QueryVariable",
+        "spec": {
+          "name": "function",
+          "current": {
+            "text": "fina-ef-invoices_ExchangeRatesImporter",
+            "value": "fina-ef-invoices_ExchangeRatesImporter"
+          },
+          "label": "function_name",
+          "hide": "dontHide",
+          "refresh": "onTimeRangeChanged",
+          "skipUrlSync": false,
+          "description": "Functions generated from cloudwatch logs that makes invocations.",
+          "query": {
+            "kind": "DataQuery",
+            "group": "cloudwatch",
+            "version": "v0",
+            "datasource": {
+              "name": "${cloudwatch_datasource}"
+            },
+            "spec": {
+              "dimensionKey": "Resource",
+              "metricName": "Invocations",
+              "namespace": "AWS/Lambda",
+              "queryType": "dimensionValues",
+              "refId": "CloudWatchVariableQueryEditor-VariableQuery",
+              "region": "eu-north-1"
+            }
+          },
+          "regex": "",
+          "regexApplyTo": "value",
+          "sort": "alphabeticalAsc",
+          "definition": "",
+          "options": [],
+          "multi": false,
+          "includeAll": false,
+          "allowCustomValue": true
+        }
+      },
+      {
+        "kind": "QueryVariable",
+        "spec": {
+          "name": "function_regex",
+          "current": {
+            "text": "ef-invoices_ExchangeRatesImporter",
+            "value": "ef-invoices_ExchangeRatesImporter"
+          },
+          "label": "function_regex",
+          "hide": "hideVariable",
+          "refresh": "onTimeRangeChanged",
+          "skipUrlSync": false,
+          "description": "Functions generated from cloudwatch logs that makes invocations.",
+          "query": {
+            "kind": "DataQuery",
+            "group": "cloudwatch",
+            "version": "v0",
+            "datasource": {
+              "name": "${cloudwatch_datasource}"
+            },
+            "spec": {
+              "dimensionFilters": {
+                "Resource": "$function"
+              },
+              "dimensionKey": "Resource",
+              "metricName": "Invocations",
+              "namespace": "AWS/Lambda",
+              "queryType": "dimensionValues",
+              "refId": "CloudWatchVariableQueryEditor-VariableQuery",
+              "region": "eu-north-1"
+            }
+          },
+          "regex": "/(?:fina-)?(.+)/",
+          "regexApplyTo": "value",
+          "sort": "alphabeticalAsc",
+          "definition": "",
+          "options": [],
+          "multi": false,
+          "includeAll": false,
+          "allowCustomValue": true
+        }
+      }
+    ],
+    "preferences": {
+      "layout": {
+        "kind": "GridLayout",
+        "spec": {
+          "items": []
+        }
+      }
+    }
+  }
+}

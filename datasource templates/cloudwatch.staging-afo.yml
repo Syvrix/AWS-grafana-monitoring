@@ -1,6 +1,6 @@
 apiVersion: 1
 datasources:
-  - name: CloudWatch
+  - name: cloudwatch.staging-afo
     type: cloudwatch
     access: proxy
     jsonData:

@@ -1,0 +1,15 @@
+apiVersion: 1
+datasources:
+- name: infinity.rds.staging-afo
+  type: infinity
+  access: AWS
+  jsonData:
+    authType: keys
+    defaultRegion: eu-north-1
+    sigV4Auth: true
+    service: rds
+    allowedHosts:
+      - https://rds.eu-north-1.amazonaws.com
+  secureJsonData:
+    accessKey: ${env:INFINITY_ACCESS_KEY}
+    secretKey: ${env:INFINITY_SECRET_KEY}

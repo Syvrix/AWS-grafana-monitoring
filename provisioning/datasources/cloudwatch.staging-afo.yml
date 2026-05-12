@@ -1,0 +1,13 @@
+api version: 1
+datasources:
+  - name: CloudWatch
+    type: cloudwatch
+    access: proxy
+    jsonData:
+      authType: keys
+      defaultRegion: eu-north-1
+      sigV4Auth: true
+    secureJsonData:
+      accessKey: ${env:CW_ACCESS_KEY}
+      secretKey: ${env:CW_SECRET_KEY}
+    queryTimeout: 30s

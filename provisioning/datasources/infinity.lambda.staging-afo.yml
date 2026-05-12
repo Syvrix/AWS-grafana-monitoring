@@ -1,0 +1,15 @@
+apiVersion: 1
+datasources:
+- name: infinity.lambda.staging-afo
+  type: infinity
+  access: AWS
+  jsonData:
+    authType: keys
+    defaultRegion: eu-north-1
+    sigV4Auth: true
+    service: lambda
+    allowedHosts:
+      - https://lambda.eu-north-1.amazonaws.com
+  secureJsonData:
+    accessKey: ${env:INFINITY_ACCESS_KEY}
+    secretKey: ${env:INFINITY_SECRET_KEY}
